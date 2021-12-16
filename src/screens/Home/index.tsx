@@ -31,16 +31,19 @@ export function Home() {
   async function loadData() {
     const dataKey = '@savepass:logins';
 
-    const response = await AsyncStorage.getItem(dataKey)
-    const parsedData = JSON.parse(response);
+    const response = await AsyncStorage.getItem(dataKey);
 
-    setSearchListData(parsedData);
-    setData(parsedData);
+    if (response) {
+      const parsedData = JSON.parse(response);
+
+      setSearchListData(parsedData);
+      setData(parsedData);
+    }
   }
 
   function handleFilterLoginData() {
     const filteredData = searchListData.filter(data => {
-      if(data.service_name.includes(searchText)){
+      if (data.service_name.includes(searchText)){
         return data;
       }
 
