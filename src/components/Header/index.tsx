@@ -36,7 +36,7 @@ export function Header({ user }: HeaderProps) {
       style={{
         ...(user
           ? {
-            backgroundColor: '#1967FB'
+            backgroundColor: '#6c0000'
           }
           : {
             backgroundColor: '#FFFFFF'
@@ -72,7 +72,7 @@ export function Header({ user }: HeaderProps) {
           <BackButton onPress={goBack}>
             <Icon
               name="chevron-left"
-              color="#1967FB"
+              color="#850000"
               size={28}
             />
           </BackButton>
