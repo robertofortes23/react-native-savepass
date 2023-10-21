@@ -1,7 +1,7 @@
-import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
+import styled from "styled-components/native";
+import { FlatList, FlatListProps } from "react-native";
 
-import { RFValue } from 'react-native-responsive-fontsize';
+import { RFValue } from "react-native-responsive-fontsize";
 
 interface LoginListDataProps {
   id: string;
@@ -10,9 +10,13 @@ interface LoginListDataProps {
   password: string;
 }
 
+interface LoginListProps extends FlatListProps<LoginListDataProps> {
+  keyExtractor: (item: LoginListDataProps) => string;
+}
+
 export const Container = styled.View`
   flex: 1;
-  background-color: #F2F3F5;
+  background-color: #f2f3f5;
   padding: 0 24px;
 `;
 
@@ -26,21 +30,20 @@ export const Metadata = styled.View`
 
 export const Title = styled.Text`
   font-size: ${RFValue(20)}px;
-  font-family: 'Rubik_500Medium';
-  color: #3D434D;
+  font-family: "Rubik_500Medium";
+  color: #3d434d;
 `;
 
 export const TotalPassCount = styled.Text`
   font-size: ${RFValue(13)}px;
-  font-family: 'Rubik_400Regular';
-  color: #888D97;
+  font-family: "Rubik_400Regular";
+  color: #888d97;
 `;
-
 
 export const LoginList = styled(
   FlatList as new () => FlatList<LoginListDataProps>
 ).attrs({
   showsVerticalScrollIndicator: false,
-})`
+})<LoginListProps>`
   margin-top: ${RFValue(16)}px;
 `;

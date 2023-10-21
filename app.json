@@ -3,9 +3,7 @@
     "name": "savepass",
     "slug": "savepass",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "icon": "./assets/images/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -18,6 +16,5 @@
         "backgroundColor": "#E5E5E5"
       }
     }
-  },
-  "name": "savepass"
+  }
 }
