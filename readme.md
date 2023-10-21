@@ -11,14 +11,17 @@
 # Telas da aplicação
 
 ## Home
+
 <img style="width: 200px" align=center src="https://i.imgur.com/uM7DaS8.jpg" />
 <br>
 
 ## Cadastrar senha
+
 <img style="width: 200px" align=center src="https://i.imgur.com/NeZIgGs.jpg" />
 <br>
 
 ## Tecnologias usadas
+
 - [React Native](https://reactnative.dev/)
 - [Expo](https://docs.expo.dev/)
 - [TypeScript](https://www.typescriptlang.org/pt/)
@@ -26,18 +29,21 @@
 - [Yup](https://github.com/jquense/yup)
 - [Jest](https://jestjs.io/)
 
-
 ## Como rodar o projeto
+
 1. Abra o terminal.
-2. Acessar a pasta de seus projetos. 
+2. Acessar a pasta de seus projetos.
 3. Dentro da pasta de seus projetos, execute os comandos abaixo:
+
 ```bash
-# Entrar na pasta do projeto 
+# Entrar na pasta do projeto
 $ cd react-native-savepass
 
 # Para baixar as dependências do projeto
 $ yarn
 
+# Executar projeto
+$ npx expo start
 ```
 
 Made with by [Roberto Fortes](https://github.com/robertofortes23/)
